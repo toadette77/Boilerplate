@@ -10,6 +10,27 @@ einsehbar. Diese werden bei Bekanntgabe im Kurs angepasst, so dass
 jeder auf dem gleichen Informationsstand ist.
 
 
+
+# Testate
+
+Es gibt 2 Testate. Zulassung zum Testat haben nur Projekte, die am
+jeweiligen Montag vorher (d.h. Montag, 12:00 Uhr mittags) einen
+Pull-Request auf dieses Projekt mit ihrem entwickelten Inhalt
+gestellt haben.
+
+Alle Gruppen, die dies nicht erfuellt haben, werden nicht zum Testat
+zugelassen. Es gibt keine Ausnahmen.
+
+## Testat am 04.05.2016
+
+Geprueft und abgenommen werden Meilenstein 1 und 2.
+
+## Testat am 15.06.2016
+
+Geprueft und abgenommen werden Meilenstein 3 und 4.
+
+
+
 # Uebersicht
 
 ![Overview Chart](./guides/asset/readme-overview.png)
@@ -25,9 +46,10 @@ notwendig.
 Studienleistung des INT-WAW Kurses ist erbracht
 bei Antreten des ersten Meilensteins.
 
-## Meilenstein 1
+## Meilenstein 1 (Beginn 23.03.2016)
 
 - Verstaendnis von Git, GitHub, Branches, Triangularer Workflow
+- Pull-Request auf dieses Projekt mit Teamname im Issue und alle Mitglieder haben schon einmal commited.
 - Interface: Status Tabelle Bots (Workload, IP, Auftrag, Pause/Resume/Stop Buttons)
 - Interface: Sidebar-Menu (Status, Auftrag, Bots)
 - Interface: GET integration zu CNC Server (/api/Status)
