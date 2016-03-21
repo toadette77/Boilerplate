@@ -12,7 +12,7 @@ jeder auf dem gleichen Informationsstand ist.
 
 # Uebersicht
 
-![Overview Chart](./guides/asset/readme-overview.svg)
+![Overview Chart](./guides/asset/readme-overview.png)
 
 
 
