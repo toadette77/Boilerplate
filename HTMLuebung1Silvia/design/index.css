@@ -1,0 +1,7 @@
+h1, h2, h3 {
+color: #7401DF;
+text-align: center;
+}
+#menu{
+  margin: 50px 0; padding: 10px; font-size: 120%; color: #FFFFFF; font-family: helvetica, arial, sans-serif; background-color: #FFF; border: 10px solid #804000;
+}
