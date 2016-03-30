@@ -1,27 +1,6 @@
-menue{
-  font-size: :1.5em;
-  position: fixed;
-  left:5%;
-  color: :red;
-}
-main{
-  position:absolute; right:2em;
-  font-size: 1em;
-}
-a:hover{
-  color: violet;
-}
-table{
-  border-style: 
-}
-th,td{
-  text-align: left;
-  width: 20em;
-  border-style:dotted;
-  border-width: thin;
-  border-color: red;
+
+body {
+	color: #ffffff;
+	background: black;
 }
 
-#tasks{
-  color: blue;
-}
