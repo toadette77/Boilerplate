@@ -1,0 +1,45 @@
+h1{
+  position: fixed;
+  color: #580000;
+
+}
+html body{
+  background:  	#707070;
+  color:        #0000FF;
+}
+
+a{
+  font-size: 20px;
+}
+
+a:hover{
+  background-color: black;
+  color: red;
+
+}
+
+a:active{
+  background: yellow;
+  color:  black;
+}
+#status{
+ position:absolute;
+ right: 200px;
+ top:100px; width:300px; height:150px;
+
+}
+
+menu{
+  position: fixed;
+  left: 10;
+  top: 70;
+  width: 100;
+  height: auto;
+  background-color: #D3D3D3;
+}
+table, th, td {
+   border: 1px solid white;
+   width: 600;
+   color: white;
+   background-color: black;
+}
