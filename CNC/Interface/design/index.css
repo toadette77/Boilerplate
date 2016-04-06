@@ -1,27 +1,68 @@
-menue{
-  font-size: :1.5em;
-  position: fixed;
-  left:5%;
-  color: :red;
+h1{
+  position: absolute;
+  left: 50%;
+  margin: auto;
+  color: #FF9900;
+
+}
+html body{
+  background:  	#080000;
+  color:        #FFFFFF ;
+}
+
+a{
+  text-decoration: none;
+  font-size: 20px;
+}
+ul{
+  list-style-type: none;
 }
 
 a:hover{
-  color: violet;
+  background-color: black;
+  color: red;
+
 }
 
-table,th,td{
-  text-align: left;
-  width: 200px;
-  border-style:dotted;
-  border-width: thin;
-  border-color: red;
+a:active{
+  background: yellow;
+  color:  black;
 }
 #status{
-  position: absolute;
-  right:200px;
-  top:100px;
-  width:300px;
+ position:absolute;
+ left: 500px;
+ top:100px; width:300px; height:150px;
+
 }
-#tasks{
-  color: blue;
+thead, tbody {
+display: block;
+
+}
+
+tbody {
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+menu{
+  position: fixed;
+  left: 10;
+  top: 70;
+  width: 100;
+  height: auto;
+  background-color: #080000;
+}
+th{
+  width: 110;
+  text-align: center;
+}
+td{
+  width: 120;
+  text-align: center;
+}
+table {
+   border: 1px solid white;
+   width: 700;
+   color: white;
+   background-color: black;
 }

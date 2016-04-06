@@ -1,15 +1,21 @@
 h1{
-  position: fixed;
-  color: #580000;
+  position: absolute;
+  left: 50%;
+  margin: auto;
+  color: #FF9900;
 
 }
 html body{
-  background:  	#707070;
-  color:        #0000FF;
+  background:  	#080000;
+  color:        #FFFFFF ;
 }
 
 a{
+  text-decoration: none;
   font-size: 20px;
+}
+ul{
+  list-style-type: none;
 }
 
 a:hover{
@@ -24,22 +30,39 @@ a:active{
 }
 #status{
  position:absolute;
- right: 200px;
+ left: 500px;
  top:100px; width:300px; height:150px;
 
 }
+thead, tbody {
+display: block;
 
+}
+
+tbody {
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 menu{
   position: fixed;
   left: 10;
   top: 70;
   width: 100;
   height: auto;
-  background-color: #D3D3D3;
+  background-color: #080000;
 }
-table, th, td {
+th{
+  width: 110;
+  text-align: center;
+}
+td{
+  width: 120;
+  text-align: center;
+}
+table {
    border: 1px solid white;
-   width: 600;
+   width: 700;
    color: white;
    background-color: black;
 }
