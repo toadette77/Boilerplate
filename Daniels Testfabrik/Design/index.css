@@ -2,11 +2,13 @@ h1{
   position: absolute;
   text-align: center;
   width: 100%;
+  height: 10%;
   left: 0%;
   right: 100%;
   top:0%;
   margin-right: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 0%;
+  margin-top: 0%;
   color: #FF9900;
   background-color: #080000;
 }
@@ -20,6 +22,7 @@ overflow-y: hidden;
 a{
   text-decoration: none;
   font-size: 20px;
+
 }
 
 a:hover{
@@ -29,17 +32,23 @@ a:hover{
 }
 
 a:active{
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition:         all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+a:active{
   background: yellow;
   color:  black;
+  font-size: 40px;
 }
 
 ul{
   list-style-type: none;
 }
 
-aside{
+menu{
   position: fixed;
   top:10%;
+  left: 0%;
   margin-left: 0%;
   margin-right: 20%;
   margin-bottom: 100%;
@@ -55,6 +64,19 @@ main{
   margin-bottom: 100%;
   margin-top: auto;
 
+}
+
+main  section{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 100%;
+
+}
+
+main  section: "status"{
+  top:0%;
 }
 
 table {
