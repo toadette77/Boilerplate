@@ -17,14 +17,13 @@ var initialize = function() {
 				code += '<td>' + entry.ip + '</td>';
 				code += '<td>' + entry.task + '</td>';
 				code += '<td>' + entry.workload + '</td>';
-        code += '<td>  <button type="button">Start<button> </td>';
+        code += '<td>  <button type="button" id='+ entry.id +' onclick="toggleButton(this.id)">Start</button> </td>';
 				code += '</tr>';
 			}
 			content.innerHTML = code;
 		} else {
 			content.innerHTML = 'Failed to load :(';
 		}
-
 	};
 
 	xhr1.send(null);
