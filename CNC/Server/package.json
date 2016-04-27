@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "node --harmony ./bin/cnc-server.js 8080",
-    "build": "babel src -d lib"
+    "build": "node ./node_modules/babel-cli/bin/babel.js src -d lib"
   },
   "main": "./lib/cnc-server.js",
   "bugs": {
