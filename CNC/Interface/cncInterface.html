@@ -3,6 +3,8 @@
 <head>
  <script src="./design/init.js"></script>
  <script src="./design/toggle.js"></script>
+ <script src="./design/sorttable.js"></script>
+
     <title>CNC-Interface</title>
     <link rel="stylesheet" href="./design/index.css">
     <link rel="stylesheet" media="print" href="./Design/index.css">
@@ -23,14 +25,14 @@
 
     <main>
       <section id="status">
-        <table id="status-overview">
+        <table id="status-overview" class="sortable">
           <thead>
             <tr>
               <th>ID</th>
               <th>IP</th>
               <th>Task</th>
               <th>Workload</th>
-              <th>Start/Stop<th>
+              <th class="sorttable_nosort">Start/Stop</th>
             </tr>
           </thead>
         <tbody>
@@ -46,6 +48,20 @@
 
 
       <section id="tasks">
-        test
+         <form action="senden.html" id="form_2">
+            <label id="h2" form="form_2">Botinput</label>
+            <label for="id">ID</label>
+            <input type="hash-md5""hash-sha256" id="id" maxlength="9">
+            <label for="type">Type</label>
+            <input type="hash-md5""hash-sha256" id="type" maxlength="9">
+            <label for="data">Data</label>
+            <input type=""hash-md5""hash-sha256"" id="data" maxlength="40">
+            <button type="reset">Eingaben zurücksetzen</button>
+            <button type="submit">Eingaben absenden</button>
+          </form>
       </section>
     </main>
+	<footer>
+	&copy blalalalala
+	</footer>
+	</html>
