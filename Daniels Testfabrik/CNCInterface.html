@@ -4,6 +4,7 @@
  <script src="./design/init.js"></script>
  <script src="./design/toggle.js"></script>
  <script src="./design/sorttable.js"></script>
+ <script src="./design/send.js"></script>
 
     <title>CNC-Interface</title>
     <link rel="stylesheet" href="./design/index.css">
@@ -11,7 +12,7 @@
   </head>
   <body>
     <header>
-      <h1>CNC Interface</h1>
+      <a href><h1>CNC Interface</h1></a>
     </header>
 
     <aside>
@@ -19,6 +20,7 @@
         <ul>
         <li><a href="#status"onclick="initialize()">Status</a></li>
         <li><a href="#tasks">Tasks</a></li>
+		<li><a href="#bots">Bots</a></li>
         </ul>
       </menu>
     </aside>
@@ -37,7 +39,7 @@
           </thead>
         <tbody>
           <tr>
-          <td colspan="5">initialize()</td>
+          <td colspan="5">No Bots active yet</td>
         </tr>
         </tbody>
 
@@ -48,20 +50,24 @@
 
 
       <section id="tasks">
-         <form action="senden.html" id="form_2">
+         <form onclick="sendFormular()" id="form_2">
             <label id="h2" form="form_2">Botinput</label>
             <label for="id">ID</label>
             <input type="hash-md5""hash-sha256" id="id" maxlength="9">
             <label for="type">Type</label>
             <input type="hash-md5""hash-sha256" id="type" maxlength="9">
             <label for="data">Data</label>
-            <input type=""hash-md5""hash-sha256"" id="data" maxlength="40">
+            <input type="hash-md5" "hash-sha256" id="data" maxlength="40">
             <button type="reset">Eingaben zurücksetzen</button>
             <button type="submit">Eingaben absenden</button>
           </form>
       </section>
+	  
+	  <section id="bots">
+	  Not yet implemented
+	  </section>
     </main>
 	<footer>
-	&copy blalalalala
+	&copy; 2016 IBots Silvia Altrichter, Eva Sennerich & Daniel Meng
 	</footer>
 	</html>

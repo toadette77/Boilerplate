@@ -26,4 +26,4 @@ var initialize = setInterval(function() {
 	};
 
 	xhr.send(null);
-},5000);
+},10000);
