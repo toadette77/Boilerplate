@@ -117,15 +117,6 @@ In der Projektabnahme (Testate) werden diese Bots mit dem letzten
 Verfuegbaren Stable Release von [node.js](https://nodejs.org)
 bestueckt sein.
 
-
-
-# Spezifikationen
-
-## Meilenstein 1
-
-Up to come ...
-
-
 # Organisation
 
 Alle organisatorischen Aufgaben, Probleme und Fragen finden
