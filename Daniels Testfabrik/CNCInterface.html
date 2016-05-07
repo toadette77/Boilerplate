@@ -1,10 +1,10 @@
 <!Doctype>
 <html>
 <head>
- <script src="./design/init.js"></script>
- <script src="./design/toggle.js"></script>
+ <script src="./design/initialize.js"></script>
+ <script src="./design/sendAction.js"></script>
  <script src="./design/sorttable.js"></script>
- <script src="./design/send.js"></script>
+ <script src="./design/sendTask.js"></script>
 
     <title>CNC-Interface</title>
     <link rel="stylesheet" href="./design/index.css">
@@ -63,11 +63,11 @@
 				</tr>
 			</tbody>
 		</table>
-	  <form>
+	 
 				<label>Type: </label><select name = "type" id="type"><option value="hash-md5">Hash MD5</option><option value="hash-sha256">Hash-sha256</option><option value="crack-md5">Crack-MD5</option></select>
 				<label>Data: </label><input type="text" name ="data" id="data"/required></input>
 				<button type="button" onclick="sendTask(document.getElementById('type').value,document.getElementById('data').value)">Send Task</button>
-	  </form>
+	  
 	 <button type="button" onclick="getTasks()">Refresh</button>
       </section>
 	  
