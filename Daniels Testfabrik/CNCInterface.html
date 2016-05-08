@@ -59,15 +59,15 @@
 			</thead>
 			<tbody>
 				<tr>
-				<td>leer</td>
+				<td colspan="4">leer</td>
 				</tr>
 			</tbody>
 		</table>
-	 
+	
 				<label>Type: </label><select name = "type" id="type"><option value="hash-md5">Hash MD5</option><option value="hash-sha256">Hash-sha256</option><option value="crack-md5">Crack-MD5</option></select>
 				<label>Data: </label><input type="text" name ="data" id="data"/required></input>
 				<button type="button" onclick="sendTask(document.getElementById('type').value,document.getElementById('data').value)">Send Task</button>
-	  
+	 
 	 <button type="button" onclick="getTasks()">Refresh</button>
       </section>
 	  

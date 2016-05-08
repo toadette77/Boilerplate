@@ -16,7 +16,7 @@ var initializeStatus = function() {
 				code += '<td>' + entry.ip + '</td>';
 				code += '<td>' + entry.task + '</td>';
 				code += '<td>' + entry.workload + '</td>';
-				code += '<td>  <button type="button" id='+ entry.id +' onclick="action(this.id)" onclick="toggleButton(this.id)" >'
+				code += '<td>  <button type="button" id='+ entry.id +' onclick="action(this.id)" onclick="toggleButton(this.id)" >';
 				if(entry.workload===1){
 				code += 'Start';
 				}else{
