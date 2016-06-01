@@ -4,7 +4,7 @@
  */
 
 // var _SERVER = 'http://botnet.artificial.engineering:8080';
-var _SERVER = 'http://localhost:8080';
+var _SERVER = 'http://botnet.artificial.engineering:8080';
 
 
 
