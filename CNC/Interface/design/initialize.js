@@ -2,7 +2,7 @@ var initializeStatus = function() {
 	var xhr    = new XMLHttpRequest();
 	var content = document.querySelector('table#status-overview tbody');
 
-	xhr.open('GET', 'http://botnet.artificial.engineering:8080/api/Status');
+	xhr.open('GET', 'http://localhost:3000/api/Status');
 	xhr.responseType = 'json';
 
 	xhr.onload = function() {
@@ -38,7 +38,7 @@ var getTasks = function(){
 	var xhr		= new XMLHttpRequest();
 	var content = document.querySelector('table#tasks-overview tbody');
 
-	xhr.open('GET','http://botnet.artificial.engineering:8080/api/Tasks');
+	xhr.open('GET','http://localhost:3000/api/Tasks');
 	xhr.responseType='json';
 	
 	xhr.onload = function() {
@@ -46,13 +46,14 @@ var getTasks = function(){
 		if(data instanceof Array){
 			var table = '';
 			for(var i = 0, il = data.length; i < il; i++) {
-				
-				table += '<tr>';
-				table += '<td>' + data[i].id + '</td>';
-				table += '<td>' + data[i].type + '</td>';
-				table += '<td>' + data[i].data.input + '</td>';
-				table += '<td>' + data[i].data.output + '</td>';
-				table += '</tr>';
+				if((data[i])!=null){
+					table += '<tr>';
+					table += '<td>' + data[i].id + '</td>';
+					table += '<td>' + data[i].type + '</td>';
+					table += '<td>' + data[i].data.input + '</td>';
+					table += '<td>' + data[i].data.output + '</td>';
+					table += '</tr>';
+				}
 			}
 			content.innerHTML = table;
 		} else {

@@ -2,7 +2,7 @@ function action(TID){
 	
 	var xhr = new XMLHttpRequest();
 	
-	xhr.open('POST', 'http://botnet.artificial.engineering:8080/api/Status');
+	xhr.open('POST', 'http://localhost:3000/api/Status');
 
 	xhr.responseType = 'json';
 	xhr.setRequestHeader('Content-type', 'application/json');

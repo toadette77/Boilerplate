@@ -2,7 +2,7 @@ var sendTask = function(type, data) {
   var xhr = new XMLHttpRequest();
 
 
-  xhr.open('POST', 'http://botnet.artificial.engineering:8080/api/Tasks');
+  xhr.open('POST', 'http://localhost:3000/api/Tasks');
 
   xhr.responseType = 'json';
   xhr.setRequestHeader('Content-type', 'application/json');
