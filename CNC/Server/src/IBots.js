@@ -16,21 +16,13 @@ var leBots=[];
 //Array mit allen Tasks 
 var dieTasks=[];
 
-
-
-//Lese die Bots ein (Status)
-fs.readFile('bots.txt','utf8', (err, data) => {
-	if (err) throw err;
-	
-	var leBots = JSON.parse(data.toString());
-	
-	app.get('/api/Status', (req, res) => {
+//Sende alle Verfuegbaren Bots
+app.get('/api/Status', (req, res) => {
 		if(leBots) {
 			res.send(JSON.stringify(leBots));
             console.log("Success!")
 		}
 	});
-});
 
 //GET - STATUS
 app.get('/api/Status/:id', (req, res) => {
@@ -47,7 +39,7 @@ app.get('/api/Status/:id', (req, res) => {
 //Post Workload Bots
 app.post('/api/Status', (req, res) => {
 	var user 	   = req.get('Token');
-	var valide =false;
+	/*var valide =false;
 	
         for(i=0;i<valideTokens.length;i++){
             if(user===valideTokens[i]){
@@ -55,13 +47,13 @@ app.post('/api/Status', (req, res) => {
                 i=valideTokens.length;
             }
         }
-	
-	if(valide) {
+	*/
+	if(valideTokens.indexOf(user)!=-1) {
 		if(req.body.status == false) {
             console.log(leBots[req.body.id]);
-			leBots[req.body.id].workload = 1;
+			leBots[--req.body.id].workload = 0;
 		} else {
-			leBots[req.body.id].workload = 0;	
+			leBots[--req.body.id].workload = 1;	
 		}
 			
 		fs.writeFile('./bots.txt', JSON.stringify(leBots), (err) => {
@@ -131,7 +123,6 @@ app.post('/api/Tasks', (req, res) => {
 
 //Start Liest alle Tasks ein
 app.listen(3000, () => {
-var tasks = fs.statSync('./tasks.txt');
 
 	try {
        
@@ -144,4 +135,15 @@ var tasks = fs.statSync('./tasks.txt');
         console.log("Datei nicht vorhanden oder leer!");
     }
 
+    try {
+        //Lese die Bots ein (Status)
+        fs.readFile('bots.txt','utf8', (err, data) => {
+	    if (err) throw err;
+	
+	    leBots = JSON.parse(data.toString());	
+        console.log("Bots eingelesen");
+        });
+     } catch (error) {
+         console.log("Datei nicht vorhanden oder Bots TOT :O");
+    }
 });
