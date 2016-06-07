@@ -26,13 +26,15 @@ app.get('/api/Status', (req, res) => {
 
 //GET - STATUS
 app.get('/api/Status/:id', (req, res) => {
-    obj = leBots.find(req, function(obj) { return obj.id == parseInt(req.params.id) })
-    if (leBots.indexOf(req.params.id) != -1) {
-        res.send(JSON.stringify(leBots[leBots.indexOf(parseInt(req.params.id - 1))]));
+    var theAnswerObj = leBots.find(function (d) {
+        return d.id == req.params.id;
+    });
+
+    if (theAnswerObj != undefined) {
+        res.send(JSON.stringify(theAnswerObj));
     } else {
         res.send(JSON.stringify("Fehler: Bot : "
-            + parseInt(req.params.id) + " nicht vorhanden!"+
-            obj ));
+            + parseInt(req.params.id) + " nicht vorhanden!"));
     }
 
 });
@@ -81,8 +83,11 @@ app.get('/api/Tasks', (req, res) => {
 
 //Show Task /api/Tasks/:id
 app.get('/api/Tasks/:id', (req, res) => {
-    if (dieTasks.indexOf(parseInt(req.params.id)) != -1) {
-        res.send(JSON.stringify(dieTasks[parseInt(req.params.id) - 1]));
+    var theAnswerObj = dieTasks.find(function (d) {
+        return d.id == req.params.id;
+    });
+    if (theAnswerObj != undefined) {
+        res.send(JSON.stringify(theAnswerObj));
     } else {
         res.send(JSON.stringify("Fehler! ID: " + parseInt(req.params.id) + " nicht vorhanden!"));
     }
