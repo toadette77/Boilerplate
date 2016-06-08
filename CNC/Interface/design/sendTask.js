@@ -10,8 +10,8 @@ var sendTask = function(type, data) {
 
   var json;
   xhr.onload = function() {
-
-    console.log(type+data);
+    console.log("Answer", xhr.response);
+    console.log(type+" "+data);
   };
 	json = { 
 	"type": type , 

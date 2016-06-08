@@ -27,7 +27,7 @@ app.get('/api/Status', (req, res) => {
 //GET - STATUS
 app.get('/api/Status/:id', (req, res) => {
     var theAnswerObj = leBots.find(function (d) {
-        return d.id == req.params.id;
+        return d.id == parseInt(req.params.id);
     });
 
     if (theAnswerObj != undefined) {
@@ -84,7 +84,7 @@ app.get('/api/Tasks', (req, res) => {
 //Show Task /api/Tasks/:id
 app.get('/api/Tasks/:id', (req, res) => {
     var theAnswerObj = dieTasks.find(function (d) {
-        return d.id == req.params.id;
+        return d.id == parseInt(req.params.id);
     });
     if (theAnswerObj != undefined) {
         res.send(JSON.stringify(theAnswerObj));
@@ -98,13 +98,17 @@ das Aktuelle, sofern vorhanden und der input Inhalt hat. Sonst lege ein neues an
 */
 app.post('/api/Tasks/:id', (req, res) => {
     var user = req.get('Token');
+    var toEditObject = dieTasks.find(function (d) {
+        return d.id == parseInt(req.params.id);
+    });
+    var taskVorhanden = dieTasks.indexOf(toEditObject);
 
     if (valideTokens.indexOf(user)) {
         if (req.body.data.input === "") {
             console.log("Task Leer! Not Cool!")
             res.send(JSON.stringify({ message: 'NOT OK' }))
-        } else if (dieTasks.indexOf(parseInt(req.params.id)) != -1) {
-            dieTasks[req.params.id - 1] = req.body;
+        } else if (taskVorhanden != -1) {
+            dieTasks[taskVorhanden] = req.body;
             res.send(JSON.stringify({ message: 'OK' }));
         } else {
             dieTasks.push(req.body);
@@ -120,6 +124,9 @@ NOT OK Message.  Sonst neuen Task Anlegen.
 */
 app.post('/api/Tasks', (req, res) => {
     var user = req.get('Token');
+    var id = dieTasks.find(function (d) {
+        return d.id == dieTasks.length + 1;
+    });
 	/*var valide =false;
 	
         for(i=0;i<valideTokens.length;i++){
@@ -132,6 +139,11 @@ app.post('/api/Tasks', (req, res) => {
         if (req.body.data.input === "") {
             console.log("Task Leer! Not Cool!")
             res.send(JSON.stringify({ message: 'NOT OK' }))
+        } else if (id != undefined) {
+            req.body.id = dieTasks.indexOf(id) + 1;
+            dieTasks.push(req.body);
+            console.log("Cool Bro!")
+            res.send(JSON.stringify({ message: 'OK' }));
         } else {
             req.body.id = dieTasks.length + 1;
             dieTasks.push(req.body);
