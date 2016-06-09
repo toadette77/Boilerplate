@@ -254,7 +254,7 @@ if (menu !== null) {
 	var submit = section.querySelector('div.action-form button');
 	if (submit !== null) {
 
-		button.onclick = function() {
+		submit.onclick = function() {
 
 			var type  = section.querySelector('div.action-form select');
 			var input = section.querySelector('div.action-form input');
